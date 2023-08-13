@@ -8,7 +8,13 @@
   font-family:"poppins";
 } 
 body{
-  background-color: #222831;
+  background-color: #27496D;
+}
+.home{
+  background-color: #27496D;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 10px;
 }
 header{
   display: flex;
@@ -53,9 +59,13 @@ position: relative;
 }
 .main-content{
   display: flex;
-  margin-top: 10%;
   padding-left: 40px;
   justify-content: space-between;
+  margin-top: 5%;
+}
+.main-content .content-text{
+align-items: center;
+margin-top: 6%;
 }
 
 .content-text h1{
@@ -81,9 +91,98 @@ position: relative;
 }
 .content-image img{
   display: flex;
-  max-width: 350px;
-  margin-right: 100px;
-  border-radius: 200px;
+  margin-right: 200px;
+  border-radius: 50% 50% 30% 30%  ;
+  padding-top: 10px;
+  background-color:#068FFF;
+  box-shadow: 0 0 8px 8px  #068FFF;
+  animation: glow 5s ease-in-out infinite alternate;
+} 
+         
+@keyframes glow {
+  20% , 50% , 100%{
+    box-shadow: 0 0 8px 8px  #068FFF;
 
+  }
+  10% , 40% ,90%{
+    box-shadow: 0 0 10px 10px #068FFF ;
+  }
+}
+.socialmedia{
+  display: flex;
+  margin-top: 5%;
+  margin-left: 30px;  
+}
+.socialmedia a{
+  margin-left: 0.5rem;
+  position: relative;
+  margin-right: 30px;
+  color: #068FFF;
+  font-size: 2rem;
+  transition: 0.5s ease-in-out;
+}
+.socialmedia a:hover{
+  color:white;
+  translate: 0px -2px;
+  scale: 1.05;
+}
+.cv-btn{
+  padding: 10px 30px;
+  margin-left: 25px;
+  margin-top: 25px;
+  background-color: #068FFF;
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  color: #EEEEEE;
+  z-index: 1;
+  }
+
+.cv-btn::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:0 ;
+  left: 0;
+  background-color: #19252f;
+  z-index: -1;
+  border-radius: 15px;
+  transform:scaleX(0);
+  transform-origin: left;
   
-}      
+}
+.cv-btn:hover::before{
+  transform:scaleX(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.about-me{
+  background: linear-gradient(#27496D,#0C7B93);
+  border: #0C7B93 4px solid;
+  color: #EEEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+  animation: border-move 2s  infinite;
+}
+
+
+.about-me-text h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+  align-items: center;
+}
+.about-me-image img{
+  border-radius: 50% 50% 30% 30%  ;
+  padding-top: 10px;}
+
+
